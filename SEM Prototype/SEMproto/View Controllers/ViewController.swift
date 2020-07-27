@@ -8,29 +8,53 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
+    // Gain access to main menu collection view
+    @IBOutlet weak var mainMenuCollectionView: UICollectionView!
     
     
-    @IBOutlet weak var menuCollectionView: UICollectionView!
+    // Init tab model and array
+    let model = TabModel()
+    var tabArray = [Tab]()
     
-    
-    @IBOutlet weak var welcomeInstructions: UIImageView!
-    
-    @IBOutlet weak var exitButton: UIButton!
+    // Set number of models
+    let numTabs:Int = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-    }
-    @IBAction func exitButtonTapped(_ sender: Any) {
-        self.hideMenu()
+        // Set up array of tabs
+        tabArray = model.getTabArray(numModels: numTabs)
+        
+        // Set view controller as datasource and delegate of the collection view
+        mainMenuCollectionView.dataSource = self
+        mainMenuCollectionView.delegate = self
+
     }
     
-    func hideMenu() {
-        exitButton.isHidden = true
-        welcomeInstructions.isHidden = true
+    
+    
+    //MARK: - Collection View Delegate Methods
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        // Return number of tabs to be displayed
+        return tabArray.count
+        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuTab", for: indexPath) as! TabCollectionViewCell
+        
+        let tab = tabArray[indexPath.row]
+        
+        // Configure each tab/cell
+        cell.configureTab(tab: tab)
+        
+        return cell
+    }
+    
 
 }
 
