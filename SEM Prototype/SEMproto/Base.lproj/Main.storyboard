@@ -36,7 +36,7 @@
         <!--Modal Pop View Controller-->
         <scene sceneID="UIC-ox-wOe">
             <objects>
-                <viewController id="N9x-fQ-EUK" customClass="ModalPopViewController" customModule="SEMproto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalVC" id="N9x-fQ-EUK" customClass="ModalPopViewController" customModule="SEMproto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xff-o0-Fzb">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
