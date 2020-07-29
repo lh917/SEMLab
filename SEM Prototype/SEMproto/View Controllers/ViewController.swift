@@ -19,7 +19,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var tabArray = [Tab]()
     
     // Set number of models
-    let numTabs:Int = 5
+    let numTabs:Int = 6
     
     override func viewDidLoad() {
         super.viewDidLoad()
