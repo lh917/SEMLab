@@ -61,7 +61,7 @@ class TabModel {
                 let decoder = JSONDecoder()
                 let array = try decoder.decode([Tab].self, from: data)
                 
-                // Notify the delegate, pass on the questions to view controller
+                // Notify the delegate, pass on the questions to modal pop view controller
                 delegate?.textRetrived(array)
                 
             } catch{

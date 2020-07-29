@@ -68,6 +68,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        // Animate the tab
+        let cell = collectionView.cellForItem(at: indexPath) as? TabCollectionViewCell
+        cell?.tabAnimation()
+        
         // If modalDialog is not empty, show the content
         if modalDialog != nil {
             modalDialog!.currentTabNumber = indexPath.row

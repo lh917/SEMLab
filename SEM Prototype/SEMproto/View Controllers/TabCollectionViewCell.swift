@@ -17,12 +17,20 @@ class TabCollectionViewCell: UICollectionViewCell {
     
     var tab:Tab?
     
+    // Set tab image
     func configureTab (tab:Tab) {
         
         self.tab = tab
         
         // Set image of that tab to the corresponding image
         tabImageView.image = UIImage(named: tab.imageName)
+        
+    }
+    
+    // Animate the tab when clicked
+    func tabAnimation (){
+        
+        UIView.transition(from: tabImageView, to: tabImageView, duration: 0.3, options: [.showHideTransitionViews, .transitionFlipFromLeft], completion: nil)
         
     }
     

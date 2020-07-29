@@ -24,11 +24,13 @@ class ModalPopViewController: UIViewController, TabProtocol {
     // Init model
     var model = TabModel()
     var modalArray = [Tab]()
+    // Number to keep track of the tab clicked
     var currentTabNumber:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Assign delegate 
         model.delegate = self
         
         // Load local JSON file
@@ -36,6 +38,7 @@ class ModalPopViewController: UIViewController, TabProtocol {
         
     }
     
+    // Update text fileds once currentTabNumber is renewed 
     func updateTextFields (){
         // Update the texts inside modal once currentTabNumber is updated
         if currentTabNumber != nil{
@@ -51,17 +54,12 @@ class ModalPopViewController: UIViewController, TabProtocol {
         // Get a reference to the tab array
         self.modalArray = tab
         
-        // Display the texts, make sure the array is not empty
-        guard modalArray.count > 0 else {
-            return
-        }
-        
     }
     
     // MARK: - Button Action Method
     @IBAction func buttonTapped(_ sender: Any) {
         
-        // TODO: Define button action 
+        // TODO: Define button action
         
     }
     
