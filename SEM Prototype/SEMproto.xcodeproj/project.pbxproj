@@ -11,6 +11,7 @@
 		330C995A24CF426C0038ACCF /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330C995924CF426C0038ACCF /* TabModel.swift */; };
 		330C995C24CF5E380038ACCF /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330C995B24CF5E380038ACCF /* TabCollectionViewCell.swift */; };
 		330C99A024D0EEED0038ACCF /* ModalPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330C999F24D0EEED0038ACCF /* ModalPopViewController.swift */; };
+		330C99A224D1982D0038ACCF /* TabQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 330C99A124D1982D0038ACCF /* TabQuestions.json */; };
 		F485D1CA24CB5BB400D5788D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D1C924CB5BB400D5788D /* AppDelegate.swift */; };
 		F485D1CC24CB5BB400D5788D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D1CB24CB5BB400D5788D /* ViewController.swift */; };
 		F485D1CF24CB5BB400D5788D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F485D1CD24CB5BB400D5788D /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		330C995924CF426C0038ACCF /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		330C995B24CF5E380038ACCF /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
 		330C999F24D0EEED0038ACCF /* ModalPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPopViewController.swift; sourceTree = "<group>"; };
+		330C99A124D1982D0038ACCF /* TabQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TabQuestions.json; sourceTree = "<group>"; };
 		F485D1C624CB5BB400D5788D /* SEMproto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEMproto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F485D1C924CB5BB400D5788D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F485D1CB24CB5BB400D5788D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				330C995724CF3EF30038ACCF /* Tab.swift */,
 				330C995924CF426C0038ACCF /* TabModel.swift */,
 				330C995B24CF5E380038ACCF /* TabCollectionViewCell.swift */,
+				330C99A124D1982D0038ACCF /* TabQuestions.json */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				F485D1D424CB5BB700D5788D /* LaunchScreen.storyboard in Resources */,
 				F485D1D124CB5BB700D5788D /* Assets.xcassets in Resources */,
 				F485D1CF24CB5BB400D5788D /* Main.storyboard in Resources */,
+				330C99A224D1982D0038ACCF /* TabQuestions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

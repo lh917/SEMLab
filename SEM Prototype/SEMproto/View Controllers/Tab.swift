@@ -10,11 +10,15 @@ import Foundation
 
 // This file contains the class for the main menu tabs
 
-class Tab {
-    
+class Tab: Decodable {
     
     var imageName = ""
-    var isTabbed = false
+    // JSON key words
+    var sampleNumber:Int?
+    var textTitle:String?
+    var sampleText:String?
+    
+    
     
     
 }

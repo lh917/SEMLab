@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModalPopViewController: UIViewController {
+class ModalPopViewController: UIViewController, TabProtocol {
     
     // Connect the labels, views and button
     @IBOutlet weak var dimView: UIView!
@@ -17,19 +17,52 @@ class ModalPopViewController: UIViewController {
     @IBOutlet weak var mainTextLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
-    var titleText = ""
-    var mainText = ""
+    // Placeholder text
+    var titleText = "Test Title"
+    var mainText = "Test Text"
+    
+    // Init model
+    var model = TabModel()
+    var modalArray = [Tab]()
+    var currentTabNumber:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Set the texts for title and main text
-        titleLabel.text = titleText
-        mainTextLabel.text = mainText
+        
+        model.delegate = self
+        
+        // Load local JSON file
+        model.getLocalJsonFile()
+        
     }
     
-    // Button action method
+    func updateTextFields (){
+        // Update the texts inside modal once currentTabNumber is updated
+        if currentTabNumber != nil{
+            titleLabel.text = modalArray[currentTabNumber!].textTitle
+            mainTextLabel.text = modalArray[currentTabNumber!].sampleText
+        }
+        
+    }
+    
+    //MARK: - TabProtocol Methods
+    // This method will be called once the model.getLocalJsonFile() is called in viewDidLoad()
+    func textRetrived(_ tab: [Tab]) {
+        // Get a reference to the tab array
+        self.modalArray = tab
+        
+        // Display the texts, make sure the array is not empty
+        guard modalArray.count > 0 else {
+            return
+        }
+        
+    }
+    
+    // MARK: - Button Action Method
     @IBAction func buttonTapped(_ sender: Any) {
+        
+        // TODO: Define button action 
+        
     }
     
 

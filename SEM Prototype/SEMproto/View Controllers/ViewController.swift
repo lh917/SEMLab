@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     // Gain access to main menu collection view
     @IBOutlet weak var mainMenuCollectionView: UICollectionView!
     
@@ -37,6 +37,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Init modal dialog controller
         if #available(iOS 13.0, *) {
             modalDialog = storyboard?.instantiateViewController(identifier: "ModalVC") as? ModalPopViewController
+            modalDialog?.modalPresentationStyle = .automatic
         } else {
             // TODO: Fallback on earlier versions
         }
@@ -67,12 +68,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-//        let cell = collectionView.cellForItem(at: indexPath) as? TabCollectionViewCell
+        // If modalDialog is not empty, show the content
         if modalDialog != nil {
+            modalDialog!.currentTabNumber = indexPath.row
             present(modalDialog!, animated: true, completion: nil)
+            
+            // Update texts based on currentTabNumber
+            modalDialog!.updateTextFields()
         }
         
     }
+    
     
 
 }
