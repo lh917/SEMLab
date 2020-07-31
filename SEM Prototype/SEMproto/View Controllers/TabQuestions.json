@@ -1,36 +1,42 @@
 [
   {
     "imageName": "tab_image1",
+    "sampleName": "Zinc",
     "sampleNumber": 1,
     "textTitle": "Sample 1 Name",
     "sampleText": "This is the textual introduction to sample 1"
   },
   {
     "imageName": "tab_image2",
+    "sampleName": "Dragonfly Wing",
     "sampleNumber": 2,
     "textTitle": "Sample 2 Name",
     "sampleText": "This is the textual introduction to sample 2"
   },
   {
     "imageName": "tab_image3",
+    "sampleName": "Aluminum",
     "sampleNumber": 3,
     "textTitle": "Sample 3 Name",
     "sampleText": "This is the textual introduction to sample 3"
   },
   {
     "imageName": "tab_image4",
+    "sampleName": "CFRP-Interlaminar",
     "sampleNumber": 4,
     "textTitle": "Sample 4 Name",
     "sampleText": "This is the textual introduction to sample 4"
   },
   {
     "imageName": "tab_image5",
+    "sampleName": "CFRP-Translaminar",
     "sampleNumber": 5,
     "textTitle": "Sample 5 Name",
     "sampleText": "This is the textual introduction to sample 5"
   },
   {
     "imageName": "tab_image6",
+    "sampleName": "Other",
     "sampleNumber": 6,
     "textTitle": "Sample 6 Name",
     "sampleText": "This is the textual introduction to sample 6"

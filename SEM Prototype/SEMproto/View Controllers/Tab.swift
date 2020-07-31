@@ -14,9 +14,11 @@ class Tab: Decodable {
     
     var imageName = ""
     // JSON key words
+    var sampleName:String?
     var sampleNumber:Int?
     var textTitle:String?
     var sampleText:String?
+    
     
     
     

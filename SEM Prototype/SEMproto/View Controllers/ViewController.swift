@@ -18,6 +18,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let model = TabModel()
     var tabArray = [Tab]()
     
+    var sampleNameArray = ["Zinc","Aluminum","CFRP-Interlaminar","CFRP Translaminar","Dragon Fly","Other"]
+    
     // Set number of models
     let numTabs:Int = 6
     
@@ -28,7 +30,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         
         // Set up array of tabs
-        tabArray = model.getTabArray(numModels: numTabs)
+        tabArray = model.getTabArray(numModels: numTabs, sampleTextArray: sampleNameArray)
         
         // Set view controller as datasource and delegate of the collection view
         mainMenuCollectionView.dataSource = self
@@ -43,6 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
 
     }
+    
     
     
     

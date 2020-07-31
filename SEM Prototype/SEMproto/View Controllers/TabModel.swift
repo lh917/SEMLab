@@ -23,7 +23,7 @@ class TabModel {
     
     
     // Function to generate an array of Tabs
-    func getTabArray (numModels:Int) -> [Tab] {
+    func getTabArray (numModels:Int, sampleTextArray:[String]) -> [Tab] {
         
         // Create empty array to contain tabs
         var tabArray = [Tab]()
@@ -36,6 +36,7 @@ class TabModel {
             
             // Assign image name, MUST BE THE SAME AS THE IMAGE FILE
             tab.imageName = "tab_image\(count)"
+            tab.sampleName = sampleTextArray[count-1]
             
             tabArray.append(tab)
             

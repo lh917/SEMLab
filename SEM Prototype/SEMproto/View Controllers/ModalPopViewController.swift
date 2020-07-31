@@ -33,6 +33,9 @@ class ModalPopViewController: UIViewController, TabProtocol {
         // Assign delegate 
         model.delegate = self
         
+        // Style the corner of the dialog view
+        dialogView.layer.cornerRadius = 10
+        
         // Load local JSON file
         model.getLocalJsonFile()
         
