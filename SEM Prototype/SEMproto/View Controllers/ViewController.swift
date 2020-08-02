@@ -39,7 +39,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Init modal dialog controller
         if #available(iOS 13.0, *) {
             modalDialog = storyboard?.instantiateViewController(identifier: "ModalVC") as? ModalPopViewController
-            modalDialog?.modalPresentationStyle = .automatic
+            modalDialog?.modalPresentationStyle = .formSheet
+            modalDialog?.preferredContentSize = CGSize(width: 1000, height: 1000)
         } else {
             // TODO: Fallback on earlier versions
         }

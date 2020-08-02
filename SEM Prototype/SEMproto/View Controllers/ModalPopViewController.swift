@@ -34,7 +34,7 @@ class ModalPopViewController: UIViewController, TabProtocol {
         model.delegate = self
         
         // Style the corner of the dialog view
-        dialogView.layer.cornerRadius = 10
+        dialogView.layer.cornerRadius = 20
         
         // Load local JSON file
         model.getLocalJsonFile()
@@ -73,9 +73,14 @@ class ModalPopViewController: UIViewController, TabProtocol {
     }
     
     // MARK: - Button Action Method
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        // TODO: Transition to detailed view
         
-        // TODO: Define button action
+    }
+    
+    @IBAction func returnButtonTapped(_ sender: Any) {
+        // Dismiss the modal when tapped
+        self.dismiss(animated: true, completion: nil)
         
     }
     

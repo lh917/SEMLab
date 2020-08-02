@@ -50,18 +50,23 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nid-IP-gw7">
-                                                <rect key="frame" x="342.5" y="538" width="159" height="50"/>
+                                                <rect key="frame" x="321.5" y="538" width="201" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2y-ga-NaU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="201" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Continue to the sample"/>
                                                         <connections>
-                                                            <action selector="buttonTapped:" destination="N9x-fQ-EUK" eventType="touchUpInside" id="Qgu-BH-o3U"/>
+                                                            <action selector="nextButtonTapped:" destination="N9x-fQ-EUK" eventType="touchUpInside" id="dcg-ah-gUC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWv-bA-RSF">
-                                                        <rect key="frame" x="56.5" y="36" width="46" height="14"/>
-                                                        <state key="normal" title="Button"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWv-bA-RSF" userLabel="Return Button">
+                                                        <rect key="frame" x="71.5" y="42" width="58" height="8"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Return"/>
+                                                        <connections>
+                                                            <action selector="returnButtonTapped:" destination="N9x-fQ-EUK" eventType="touchUpInside" id="HjD-oW-Huy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -244,15 +249,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on a tab to start the experiment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQb-Nd-Fbs">
+                                <rect key="frame" x="353" y="564" width="318" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XfH-O7-rTY" secondAttribute="bottom" constant="100" id="0Nl-pd-6Ep"/>
                             <constraint firstItem="NrY-9v-6NF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6hd-Dg-eh6"/>
                             <constraint firstItem="KL5-ex-Orv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8GJ-yt-7vZ"/>
+                            <constraint firstItem="tQb-Nd-Fbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AD1-bQ-orH"/>
                             <constraint firstItem="XfH-O7-rTY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="DF7-Xl-D39"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NrY-9v-6NF" secondAttribute="bottom" id="HoT-fb-IbQ"/>
                             <constraint firstItem="KL5-ex-Orv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KHV-Y1-4Tr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tQb-Nd-Fbs" secondAttribute="bottom" constant="180" id="Onz-ae-XKH"/>
                             <constraint firstItem="XfH-O7-rTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PF8-EF-byI"/>
                             <constraint firstAttribute="bottom" secondItem="KL5-ex-Orv" secondAttribute="bottom" id="T12-Y4-Ujf"/>
                             <constraint firstItem="NrY-9v-6NF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xmb-fB-nlK"/>
