@@ -36,9 +36,9 @@
   },
   {
     "imageName": "tab_image6",
-    "sampleName": "Other",
+    "sampleName": "Welcome Guide",
     "sampleNumber": 6,
-    "textTitle": "Sample 6 Name",
-    "sampleText": "This is the textual introduction to sample 6"
+    "textTitle": "Welcome to the SEM Experiment!",
+    "sampleText": "This is the textual guidance to this lab."
   }
 ]

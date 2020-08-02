@@ -51,6 +51,19 @@ class ModalPopViewController: UIViewController, TabProtocol {
         
     }
     
+    // Display the welcome tab when the app is launched 
+    func showWelcomeMessage (){
+        
+        if currentTabNumber == nil {
+            
+            // Welcome message is set at tab 6
+            titleLabel.text = modalArray[5].textTitle
+            mainTextLabel.text = modalArray[5].sampleText
+            
+        }
+        
+    }
+    
     //MARK: - TabProtocol Methods
     // This method will be called once the model.getLocalJsonFile() is called in viewDidLoad()
     func textRetrived(_ tab: [Tab]) {

@@ -18,7 +18,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let model = TabModel()
     var tabArray = [Tab]()
     
-    var sampleNameArray = ["Zinc","Aluminum","CFRP-Interlaminar","CFRP Translaminar","Dragon Fly","Other"]
+    var sampleNameArray = ["Zinc","Aluminum","CFRP-Interlaminar","CFRP-Translaminar","Dragon Fly","Welcome Guide"]
     
     // Set number of models
     let numTabs:Int = 6
@@ -43,7 +43,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else {
             // TODO: Fallback on earlier versions
         }
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // After the view appears, summon the welcome modal
+        if modalDialog != nil {
+            present(modalDialog!, animated: true, completion: nil)
+            
+            // Update texts based on currentTabNumber
+            modalDialog!.showWelcomeMessage()
+        }
     }
     
     
