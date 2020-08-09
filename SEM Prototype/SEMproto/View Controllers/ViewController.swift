@@ -18,10 +18,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let model = TabModel()
     var tabArray = [Tab]()
     
-    var sampleNameArray = ["Zinc","Aluminum","CFRP-Interlaminar","CFRP-Translaminar","Dragon Fly","Welcome Guide"]
+    var sampleNameArray = ["Zinc","Aluminum","CFRP-Interlaminar","CFRP-Translaminar","Dragon Fly","Demostration Video", "SEM Background", "Welcome Guide"]
     
     // Set number of models
-    let numTabs:Int = 6
+    let numTabs:Int = 8
     
     // Popup window controller
     var modalDialog:ModalPopViewController?
@@ -88,8 +88,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // If modalDialog is not empty, show the content
         if modalDialog != nil {
             modalDialog!.currentTabNumber = indexPath.row
-            present(modalDialog!, animated: true, completion: nil)
-            
+            DispatchQueue.main.async {
+                self.present(self.modalDialog!, animated: true, completion: nil)
+            }
             // Update texts based on currentTabNumber
             modalDialog!.updateTextFields()
         }

@@ -27,6 +27,8 @@ class ModalPopViewController: UIViewController, TabProtocol {
     // Number to keep track of the tab clicked
     var currentTabNumber:Int?
     
+    var detailedView:DetailedViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,15 @@ class ModalPopViewController: UIViewController, TabProtocol {
         
         // Load local JSON file
         model.getLocalJsonFile()
+        
+        if #available(iOS 13.0, *) {
+            
+            detailedView = storyboard?.instantiateViewController(identifier: "detailedVC") as? DetailedViewController
+            detailedView?.modalPresentationStyle = .fullScreen
+            
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
     
@@ -76,11 +87,22 @@ class ModalPopViewController: UIViewController, TabProtocol {
     @IBAction func nextButtonTapped(_ sender: Any) {
         // TODO: Transition to detailed view
         
+        if self.detailedView != nil {
+            DispatchQueue.main.async {
+                self.present(self.detailedView!, animated: true, completion: nil)
+            }
+        }
+        
+        //self.dismiss(animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func returnButtonTapped(_ sender: Any) {
         // Dismiss the modal when tapped
-        self.dismiss(animated: true, completion: nil)
+        //DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        //}
         
     }
     

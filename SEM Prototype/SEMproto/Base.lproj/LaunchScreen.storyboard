@@ -20,25 +20,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="N87-h6-JgE">
-                                        <rect key="frame" x="117" y="158" width="790" height="200"/>
+                                        <rect key="frame" x="116.5" y="158" width="791" height="200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImperialName" translatesAutoresizingMaskIntoConstraints="NO" id="4tY-Ro-6qi">
-                                                <rect key="frame" x="0.0" y="0.0" width="552.5" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="552" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="17x-gR-dG8"/>
                                                     <constraint firstAttribute="width" secondItem="4tY-Ro-6qi" secondAttribute="height" multiplier="58:21" id="xkt-Ky-iQ2"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="fQr-cR-M1J">
-                                                <rect key="frame" x="566.5" y="0.0" width="223.5" height="200"/>
+                                                <rect key="frame" x="566" y="0.0" width="225" height="200"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="4tY-Ro-6qi" firstAttribute="centerY" secondItem="N87-h6-JgE" secondAttribute="centerY" id="LKX-DS-Kh5"/>
+                                            <constraint firstItem="fQr-cR-M1J" firstAttribute="height" secondItem="4tY-Ro-6qi" secondAttribute="height" id="LlI-t2-yQI"/>
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEM Laboratory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76Y-ey-ZKF">
-                                        <rect key="frame" x="342" y="434" width="341" height="60"/>
+                                        <rect key="frame" x="342" y="434" width="340.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -47,7 +48,6 @@
                                 <color key="backgroundColor" red="0.086080558599999996" green="0.2258948684" blue="0.43531566859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="N87-h6-JgE" firstAttribute="centerX" secondItem="Mif-WF-QwD" secondAttribute="centerX" id="BsN-Ni-XqX"/>
-                                    <constraint firstItem="N87-h6-JgE" firstAttribute="leading" secondItem="Mif-WF-QwD" secondAttribute="leading" constant="117" id="GmT-Wj-Vmn"/>
                                     <constraint firstItem="76Y-ey-ZKF" firstAttribute="top" secondItem="N87-h6-JgE" secondAttribute="bottom" constant="76" id="K5U-gq-MKQ"/>
                                     <constraint firstItem="N87-h6-JgE" firstAttribute="top" secondItem="Mif-WF-QwD" secondAttribute="top" constant="158" id="s5p-oe-1ra"/>
                                     <constraint firstItem="N87-h6-JgE" firstAttribute="centerX" secondItem="76Y-ey-ZKF" secondAttribute="centerX" id="tlt-S9-MiR"/>
